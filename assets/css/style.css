@@ -181,9 +181,11 @@ p#java_chosen_n, p#dice_output {
     background-color: white;
     border: solid 1px black;
     box-shadow: 1.5px 1px black;
+    font-size: .7rem;
     font-weight: 400;
     color: black;
     text-align: center;
+    padding-top: 2.5px;
 }
 
 div#c_dices {

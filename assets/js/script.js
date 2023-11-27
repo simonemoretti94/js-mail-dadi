@@ -18,6 +18,8 @@ const verification = document.querySelector('p#p_verification');
 
 //simone.moretti.944@gmail.com
 
+//declaring counter for utility purpose
+let c=  0;
 
 //button click listener
 button_click.addEventListener('click', function() {
@@ -30,15 +32,26 @@ button_click.addEventListener('click', function() {
         console.log('actual mail: ',e_mails[i]);
         
         //if in order to verify input ad array index
-        if (input_mail === e_mails[i]) {
-            verification.innerHTML = `${input_mail.value}` + `found at position #${i}`;
+        if (input_mail.value === e_mails[i]) {
+            verification.innerHTML = `${input_mail.value} found at position #${i}`;
         }
         else {
-            continue;
+            // c = parseInt(c + 1);
+            c += 1;
+            console.log('c: ',c);
+            if (c === e_mails.length) {
+                verification.innerHTML = `${input_mail.value} not found`;
+            }
+            else {
+                continue;
+            }
         }
     }
 
+
 })
 
+
+console.log('array length: ', e_mails.length, ' c:', c);
 
 
