@@ -54,8 +54,8 @@ button_click.addEventListener('click', function() {
     )
 
 
-
-console.log(Math.floor(Math.random()*6 + 1));
+//math random from 1 to 6 test
+// console.log(Math.floor(Math.random()*6 + 1));
 
 //simone.moretti.944@gmail.com
 
@@ -70,13 +70,40 @@ const output_user_chosen_n = document.querySelector('p#user_chosen_n');
 //Getting p java choosed
 const output_java_chosen_n = document.querySelector('p#java_chosen_n');
 
+//Getting p winner
+const winning_p = document.querySelector('p#dice_output');
+
 
 //getting button submit
 const button_number_submit =  document.querySelector('button#number_submit');
 
-console.log('empty input: ', input_chosen_n, ' ouput_user: ', output_user_chosen_n, ' output_java: ', output_java_chosen_n, ' button_submit: ',button_number_submit );
+console.log('empty input: ', input_chosen_n, ' ouput_user: ', output_user_chosen_n, ' output_java: ', output_java_chosen_n, ' button_submit: ',button_number_submit, ' p_winner: ', winning_p);
 
 button_number_submit.addEventListener('click', function() {
 
-    //verifying if event listener is working
+    //verifying if event listener works
+    console.log('Event listener works!');
+
+    const java_n = Math.floor(Math.random()*6 + 1);
+    console.log('verifying java_n: ', java_n);
+
+    //showing numbers on screen
+    output_user_chosen_n.innerHTML = `${input_chosen_n.value}`;
+    output_java_chosen_n.innerHTML = `${java_n}`;
+    //showing numbers on console
+    console.log('outuput_user: ', output_user_chosen_n.innerHTML, ' output_java: ',output_java_chosen_n);
+
+    //Comparing numbers
+
+    if (input_chosen_n.value > java_n) {
+        winning_p.innerHTML = `${input_chosen_n.value} > ${java_n}, user wins!`
+    }
+    else if (input_chosen_n.value < java_n) {
+        winning_p.innerHTML = `${java_n} > ${input_chosen_n.value}, java wins!`
+    }
+    else {
+        winning_p.innerHTML = `they're the same, no winners, no losers!`
+    }
+
+    console.log('tschùss!');
 })
