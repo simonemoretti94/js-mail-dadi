@@ -102,8 +102,8 @@ button_number_submit.addEventListener('click', function() {
         winning_p.innerHTML = `${java_n} > ${input_chosen_n.value}, java wins!`
     }
     else {
-        winning_p.innerHTML = `they're the same, no winners, no losers!`
+        winning_p.innerHTML = `They're the same, no winners, no losers!`
     }
 
-    console.log('tschùss!');
+    console.log('That\'s the end, bis bald!');
 })
