@@ -99,7 +99,7 @@ button_number_submit.addEventListener('click', function() {
         winning_p.innerHTML = `${input_chosen_n.value} > ${java_n}, user wins!`
     }
     else if (input_chosen_n.value < java_n) {
-        winning_p.innerHTML = `${java_n} > ${input_chosen_n.value}, java wins!`
+        winning_p.innerHTML = `${input_chosen_n.value} < ${java_n}, java wins!`
     }
     else {
         winning_p.innerHTML = `They're the same, no winners, no losers!`
