@@ -55,4 +55,28 @@ button_click.addEventListener('click', function() {
 
 
 
-// console.log(Math.floor(Math.random()*6 + 1));
+console.log(Math.floor(Math.random()*6 + 1));
+
+//simone.moretti.944@gmail.com
+
+//Dices game
+
+//Getting input number
+const input_chosen_n = document.querySelector('input#input_chosen_n');
+
+//Getting p user choosed
+const output_user_chosen_n = document.querySelector('p#user_chosen_n');
+
+//Getting p java choosed
+const output_java_chosen_n = document.querySelector('p#java_chosen_n');
+
+
+//getting button submit
+const button_number_submit =  document.querySelector('button#number_submit');
+
+console.log('empty input: ', input_chosen_n, ' ouput_user: ', output_user_chosen_n, ' output_java: ', output_java_chosen_n, ' button_submit: ',button_number_submit );
+
+button_number_submit.addEventListener('click', function() {
+
+    //verifying if event listener is working
+})
